@@ -1,136 +1,136 @@
-/* Body */
 body {
     font-family: Arial, sans-serif;
     background: white;
-    margin: 0; /* Remove default spacing around the page */
+    margin: 0;
 }
 
 /* Hero Section (Header) */
 header {
     background: linear-gradient(to right, rgb(69, 110, 221), rgb(50, 50, 194)); /* Gradient background from left to right*/
-    text-align: center; /* Center all content horizontally */
-    color: white; /* Default text color */
-    margin: 0; /* Remove default margin */
-    text-align: center; /* Center the text */
-    padding-top: 0; /* Remove default top margin */
-    padding-bottom: 20px; /* Space below the header */
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 /* Main Heading */
 header h1 {
-    font-size: 48px; /* Large text for the headline */
-    padding: 80px 20px; /* Space inside the header (top/bottom, left/right) */
-    background: linear-gradient(to right, rgb(223, 218, 218) 0%, white) 100%; /* Gradient from gray to white */
-    -webkit-background-clip: text; /* Clip background to text shape (webkit browsers) */
-    background-clip: text; /* Clip background to text shape (standard) */
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-    margin: 0 0 10px 0; /* Remove top margin, keep bottom margin */
-    font-weight: bold; /* Make text thicker/darker */
+    font-size: 48px;
+    padding: 80px 20px;
+    color: white;
+    margin: 0 0 10px 0;
+    font-weight: bold;
 }
 
 /* Logo styling */
 header img {
-    width: 100px; /* Set logo width */
-    height: auto; /* Keep the original height ratio */
-    padding: 5px; /* Add space around the logo */
-    margin-bottom: 20px; /* Add space below the logo */
-    float: left; /* Align logo to the left */
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+    float: inline-start;
 }
 
 /* Subheading */
 header p {
-    font-size: 18px; /* Slightly larger than normal text */
-    line-height: 1.6; /* Add space between lines for readability */
-    max-width: 600px; /* Limit text width so it doesn't stretch too wide */
-    margin: 10px auto; /* Center the text block and add space around it */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 10px auto;
 }
 
 /* Timeline Cards Section */
-section {
+.timeline-section {
     display: flex; /* Arrange cards in a row */
     flex-wrap: nowrap;
     overflow-x: auto; /* Allow horizontal scrolling if cards exceed screen width */
-    gap: 15px; /* Minimal space between cards */
-    padding: 10px; /* Space around the entire section */
-    width: 100%; /* Use full width of container */
-    max-width: 840px; /* Show only 4 cards at a time (4×200px + 3×15px + 40px padding) */
-    margin: 60px auto; /* Center the section itself */
+    gap: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 860px;
+    margin: 60px auto;
 }
 
 /* Individual Card Styling */
-section > div {
-    width: 200px; /* Fixed width for each card */
-    flex-shrink: 0; /* Prevent cards from shrinking */
-    background-color: #f5f5f5; /* Light gray background */
-    border: 1px solid #ddd; /* Light border around card */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Keep content inside rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Organize card contents */
-    flex-direction: column; /* Stack content vertically */
-    position: relative; /* Enable absolute positioning for paragraph */
+.timeline-section > div {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-section > div {
+.timeline-section > div {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-section > div:hover {
-    transform: scale(1.05); /* Grow 5% */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+.timeline-section > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard users get the same description that mouse users see on hover. */
+.timeline-section > div:focus {
+    outline: 3px solid #0d6efd;
+    outline-offset: 3px;
 }
 
 /* Image placeholder area in cards */
-section > div img {
-    width: 100%; /* Full width of card */
-    height: 120px; /* Fixed height for image */
-    object-fit: cover; /* Crop image to fill space */
-    display: block; /* Remove spacing below image */
+.timeline-section > div img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
 }
 
 /* Card content (text) */
-section > div h2 {
-    font-size: 20px; /* Year text size */
-    margin: 10px 10px 5px 10px; /* Space around year */
-    color: rgb(69, 110, 221); /* Blue color for year */
+.timeline-section > div h2 {
+    font-size: 20px;
+    margin: 10px;
+    color: rgb(5, 47, 162);
 }
 
-section > div h3 {
-    font-size: 16px; /* Title size */
-    margin: 0 10px 10px 10px; /* Space around title */
-    color: #333; /* Dark text */
+.timeline-section > div h3 {
+    font-size: 16px;
+    margin: 0 10px 10px;
+    color: #333;
 }
 
-section > div p {
-    position: absolute; /* Position over image */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    right: 0; /* Stretch to right */
-    width: 100%; /* Full width */
-    height: 200px; /* Match image height */
-    margin: 0; /* Remove default margin */
-    padding: 10px; /* Padding for text */
-    display: flex; /* Center content */
-    align-items: center; /* Vertical center */
-    justify-content: center; /* Horizontal center */
-    text-align: center; /* Center text */
-    font-size: 14px; /* Smaller text for description */
-    line-height: 1.4; /* Line spacing */
-    color: white; /* White text for visibility */
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-    opacity: 0; /* Hide by default */
-    z-index: 2; /* Above image */
-    box-sizing: border-box; /* Include padding in width */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
-    border-radius: 8px 8px 0 0; /* Match card top corners */
+.timeline-section > div p {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px 8px 0 0;
 }
 
-section > div:hover p {
+.timeline-section > div:hover p,
+.timeline-section > div:focus p {
     opacity: 1; /* Show on hover */
 }
 
 /* Card images */
-section > div img {
+.timeline-section > div img {
     width: 100%; /* Full width of card */
     height: 120px; /* Fixed height */
     object-fit: cover; /* Crop image to fill space */
@@ -138,30 +138,91 @@ section > div img {
 }
 
 /* Footer Paragraph */
-p{
-  text-align: center;
-}
-
 /* Responsive Design for Smaller Screens */
 @media (max-width: 600px) {
-    section {
+    .timeline-section {
         flex-wrap: wrap; /* Allow cards to wrap vertically */
         max-width: 100%; /* Allow full width on small screens */
         overflow-x: hidden; /* Disable horizontal scrolling */
     }
 
-    section > div {
+    .timeline-section > div {
         width: calc(100% - 40px); /* Full width minus padding */
         flex-shrink: 1; /* Allow cards to shrink and fit properly */
     }
 
-    section > div img {
+    .timeline-section > div img {
         height: 200px; /* Larger image height on mobile */
         object-fit: contain; /* Show full image without cropping */
         background-color: #f0f0f0; /* Light gray background for empty space */
     }
 
-    section > div p {
+    .timeline-section > div p {
         height: 200px; /* Match image height on mobile */
     }
+}
+
+/* Touch devices do not have hover, so keep descriptions visible there. */
+@media (hover: none) {
+    .timeline-section > div p {
+        position: static;
+        height: auto;
+        min-height: 0;
+        opacity: 1;
+        color: #333;
+        background: transparent;
+        text-align: start;
+    }
+}
+
+/* Keep the new Bootstrap section separate from the timeline card styles above. */
+.three-column-section {
+    display: block;
+    max-width: 1140px;
+    overflow: visible;
+    padding-inline: 12px;
+}
+
+.three-column-section > .row > div {
+    min-height: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    display: block;
+    position: static;
+}
+
+.three-column-section .card p {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: block;
+    text-align: start;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: inherit;
+    background: transparent;
+    opacity: 1;
+    z-index: auto;
+    border-radius: 0;
+}
+
+.three-column-section .card:hover,
+.three-column-section .card:focus {
+    transform: none;
+    box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+/* Flip the arrow icon for right-to-left languages */
+[dir="rtl"] .btn .bi-arrow-right {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+footer {
+  background: linear-gradient(to right, rgb(69, 110, 221), rgb(50, 50, 194));
 }
